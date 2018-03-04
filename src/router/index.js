@@ -38,23 +38,47 @@ export const constantRouterMap = [
   },
 
   {
-    path: '/example',
+    path: '/pages',
     component: Layout,
-    redirect: '/example/table',
-    name: 'Example',
-    meta: { title: 'Example', icon: 'example' },
+    redirect: '/pages/index',
+    name: 'pages',
+    meta: { title: '页面管理', icon: 'pages' },
     children: [
       {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
+        path: 'index',
+        name: 'Index',
+        component: () => import('@/views/index/index'),
+        meta: { title: 'index', icon: 'index' }
       },
       {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
+        path: 'members',
+        name: 'Members',
+        component: () => import('@/views/members/index'),
+        meta: { title: 'members', icon: 'member' }
+      },
+      {
+        path: 'researchs',
+        name: 'Research',
+        component: () => import('@/views/researchs/index'),
+        meta: { title: 'research', icon: 'research' }
+      },
+      {
+        path: 'events',
+        name: 'Events',
+        component: () => import('@/views/events/index'),
+        meta: { title: 'events', icon: 'event' }
+      },
+      {
+        path: 'join',
+        name: 'Join',
+        component: () => import('@/views/join/index'),
+        meta: { title: 'join', icon: 'join' }
+      },
+      {
+        path: 'about',
+        name: 'About',
+        component: () => import('@/views/about/index'),
+        meta: { title: 'about', icon: 'about' }
       }
     ]
   },
